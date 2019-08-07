@@ -1,0 +1,33 @@
+{
+  "name": "UiPathTeam.Barcode",
+  "description": "Wrapper on top of the Barcode ZXing library",
+  "main": "Decode Image.xaml",
+  "dependencies": {
+    "UiPath.UIAutomation.Activities": "18.4.2",
+    "ZXing.Net": "0.16.4"
+  },
+  "webServices": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "19.7.0.0",
+  "projectVersion": "1.0.3",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Library",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    }
+  },
+  "expressionLanguage": "VisualBasic"
+}
