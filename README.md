@@ -1,5 +1,11 @@
 # UiPathTeam.Barcode
 
+### Links
+
+Project on UiPath Connect! https://connect.uipath.com/community/project/uipathteam-barcode
+
+Component on UiPath Go! https://go.uipath.com/preview/barcode-activities
+
 ### Description
 
 This is an activity package exposing 2 activities:
