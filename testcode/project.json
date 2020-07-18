@@ -3,9 +3,9 @@
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.System.Activities": "[19.7.0]",
-    "UiPath.UIAutomation.Activities": "[19.7.0]",
-    "UiPathTeam.Barcode": "[1.0.3]"
+    "UiPath.System.Activities": "[20.4.0]",
+    "UiPath.UIAutomation.Activities": "[20.4.2]",
+    "UiPathTeam.Barcode": "[1.0.5]"
   },
   "webServices": [],
   "schemaVersion": "4.0",
@@ -28,7 +28,8 @@
     "libraryOptions": {
       "includeOriginalXaml": false,
       "privateWorkflows": []
-    }
+    },
+    "fileInfoCollection": []
   },
   "expressionLanguage": "VisualBasic"
 }
