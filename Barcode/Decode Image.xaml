@@ -11,6 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
+  <sap2010:Annotation.AnnotationText>UPTF00000134eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjoiaHR0cHM6XC9cL2dpdGh1Yi5jb21cL3FicmFuZG9uXC9VaVBhdGhUZWFtLkJhcmNvZGUiLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjoiRGVjb2RlIEJhcmNvZGUgZnJvbSBhbiBpbnB1dCBVaVBhdGguQ29yZS5JbWFnZSB1c2luZyB0aGUgWlhpbmcuQmFyY29kZVJlYWRlciBjbGFzcyIsIjxWZXJzaW9uPmtfX0JhY2tpbmdGaWVsZCI6MX0=</sap2010:Annotation.AnnotationText>
   <sap:VirtualizedContainerService.HintSize>1874,931.333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>

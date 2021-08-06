@@ -12,6 +12,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
+  <sap2010:Annotation.AnnotationText>UPTF000000F8eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjoiaHR0cHM6XC9cL2dpdGh1Yi5jb21cL3FicmFuZG9uXC9VaVBhdGhUZWFtLkJhcmNvZGUiLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjoiRW5jb2RlIGEgU3RyaW5nIGludG8gYSBCYXJjb2RlIGltYWdlIiwiPFZlcnNpb24+a19fQmFja2luZ0ZpZWxkIjoxfQ==</sap2010:Annotation.AnnotationText>
   <sap:VirtualizedContainerService.HintSize>1874,931.333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Encode String_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>

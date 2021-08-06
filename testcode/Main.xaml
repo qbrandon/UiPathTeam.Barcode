@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1874,936.666666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ub="clr-namespace:UiPathTeam_Barcode.Barcode;assembly=UiPathTeam.Barcode" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1721.33333333333,1642.66666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:u="clr-namespace:UiPathTeam_Barcode;assembly=UiPathTeam.Barcode" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="42">
       <x:String>System.Activities</x:String>
@@ -25,6 +25,13 @@
       <x:String>ZXing</x:String>
       <x:String>ZXing.Common</x:String>
       <x:String>ZXing.QrCode</x:String>
+      <x:String>UiPathTeam_Barcode.Barcode</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPathTeam_Barcode</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -47,9 +54,15 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>zxing</AssemblyReference>
       <AssemblyReference>zxing.presentation</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPathTeam.Barcode</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Sample usage of the Barcode activities&#xA;1. Read image file&#xA;2. Decode barcode&#xA;3. display decoded text&#xA;4. re-encode text to barcode&#xA;5. save generated barcode image to file" sap:VirtualizedContainerService.HintSize="376,872" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Sample usage of the Barcode activities&#xA;1. Read image file&#xA;2. Decode barcode&#xA;3. display decoded text&#xA;4. re-encode text to barcode&#xA;5. save generated barcode image to file" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="454.666666666667,1578" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Image" Name="img" />
       <Variable x:TypeArguments="x:String" Name="txt" />
@@ -60,28 +73,70 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LoadImage sap2010:Annotation.AnnotationText="File included in the project" DisplayName="Load Image" FileName="barcode.jpg" sap:VirtualizedContainerService.HintSize="334,89.3333333333333" sap2010:WorkflowViewState.IdRef="LoadImage_1" Image="[img]">
+    <Sequence DisplayName="1 - Decode Test" sap:VirtualizedContainerService.HintSize="412.666666666667,387.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </ui:LoadImage>
-    <ub:Decode_Image Format="{x:Null}" sap2010:Annotation.AnnotationText="Decode requires no particular treatment" Charset="UTF-8" DisplayName="Decode Image" sap:VirtualizedContainerService.HintSize="334,67.3333333333333" sap2010:WorkflowViewState.IdRef="Decode_Image_1" Image="[img]" Output="[txt]">
+      <ui:LoadImage sap2010:Annotation.AnnotationText="File included in the project" DisplayName="Load Image" FileName="barcode.jpg" sap:VirtualizedContainerService.HintSize="334,89.3333333333333" sap2010:WorkflowViewState.IdRef="LoadImage_1" Image="[img]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LoadImage>
+      <u:Decode_Image Format="{x:Null}" sap2010:Annotation.AnnotationText="Decode requires no particular treatment" Charset="UTF-8" DisplayName="Decode Image" sap:VirtualizedContainerService.HintSize="334,67.3333333333333" sap2010:WorkflowViewState.IdRef="Decode_Image_1" Image="[img]" Output="[txt]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </u:Decode_Image>
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Display decoded value" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[txt]" TopMost="True" />
+    </Sequence>
+    <Sequence DisplayName="2- Encode Test" sap:VirtualizedContainerService.HintSize="412.666666666667,424.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </ub:Decode_Image>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Display decoded value" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[txt]" TopMost="True" />
-    <ub:Encode_String sap2010:Annotation.AnnotationText="Encoding to image requires some parameters:&#xA;1. Code format (the sample is International Article Number so we stick to that: UPC_A)&#xA;2. size/margin&#xA;3. PureBarcode determines if the human readable value should be kept under the code" Charset="UTF-8" DisplayName="Encode String" Format="[ZXing.BarcodeFormat.UPC_A]" Height="150" sap:VirtualizedContainerService.HintSize="334,200.666666666667" sap2010:WorkflowViewState.IdRef="Encode_String_1" Input="[txt]" Margin="20" Output="[img]" PureBarcode="False" Width="300">
+      <u:Encode_String sap2010:Annotation.AnnotationText="Encoding to image requires some parameters:&#xA;1. Code format (the sample is International Article Number so we stick to that: UPC_A)&#xA;2. size/margin&#xA;3. PureBarcode determines if the human readable value should be kept under the code" Charset="UTF-8" DisplayName="Encode String" Format="[ZXing.BarcodeFormat.UPC_A]" Height="150" sap:VirtualizedContainerService.HintSize="334,200.666666666667" sap2010:WorkflowViewState.IdRef="Encode_String_1" Input="[txt]" Margin="20" Output="[img]" PureBarcode="False" Width="300">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </u:Encode_String>
+      <ui:SaveImage DisplayName="Save Image" FileName="output.jpg" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[img]" />
+    </Sequence>
+    <Sequence DisplayName="3 - Decode Multiple Test" sap:VirtualizedContainerService.HintSize="412.666666666667,482" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="s:String[]" Name="txtArray" />
+      </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </ub:Encode_String>
-    <ui:SaveImage DisplayName="Save Image" FileName="output.jpg" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[img]" />
+      <ui:LoadImage sap2010:Annotation.AnnotationText="File included in the project" DisplayName="Load Image" FileName="barcodeMultiple.jpg" sap:VirtualizedContainerService.HintSize="370.666666666667,89.3333333333333" sap2010:WorkflowViewState.IdRef="LoadImage_2" Image="[img]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LoadImage>
+      <u:DecodeMultiple_Image Format="{x:Null}" Charset="UTF-8" DisplayName="DecodeMultiple Image" sap:VirtualizedContainerService.HintSize="370.666666666667,22" sap2010:WorkflowViewState.IdRef="DecodeMultiple_Image_1" Image="[img]" Output="[txtArray]" />
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="370.666666666667,198.666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[txtArray]">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:String">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+            </ActivityAction.Argument>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Display decoded value" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[item]" TopMost="True" />
+          </ActivityAction>
+        </ui:ForEach.Body>
+      </ui:ForEach>
+    </Sequence>
   </Sequence>
 </Activity>

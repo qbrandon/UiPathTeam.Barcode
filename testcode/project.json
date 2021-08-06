@@ -5,9 +5,10 @@
   "dependencies": {
     "UiPath.System.Activities": "[20.4.0]",
     "UiPath.UIAutomation.Activities": "[20.4.2]",
-    "UiPathTeam.Barcode": "[1.0.5]"
+    "UiPathTeam.Barcode": "[1.0.8]"
   },
   "webServices": [],
+  "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "19.7.0.0",
   "projectVersion": "1.0.0",
@@ -20,7 +21,10 @@
       "Private:*",
       "*password*"
     ],
-    "executionType": "Workflow"
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -29,7 +33,23 @@
       "includeOriginalXaml": false,
       "privateWorkflows": []
     },
-    "fileInfoCollection": []
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": false
   },
-  "expressionLanguage": "VisualBasic"
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "d0f2fa1b-3ef3-49d9-8d92-452f906c6c92",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
 }

@@ -7,9 +7,10 @@
     "ZXing.Net": "0.16.4"
   },
   "webServices": [],
+  "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "19.7.0.0",
-  "projectVersion": "1.0.5",
+  "projectVersion": "1.0.8",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -19,7 +20,10 @@
       "Private:*",
       "*password*"
     ],
-    "executionType": "Workflow"
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -28,7 +32,17 @@
       "includeOriginalXaml": false,
       "privateWorkflows": []
     },
-    "fileInfoCollection": []
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": false
   },
-  "expressionLanguage": "VisualBasic"
+  "expressionLanguage": "VisualBasic",
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {
+    "iconUrl": ".package/icon.jpg"
+  },
+  "targetFramework": "Legacy"
 }
