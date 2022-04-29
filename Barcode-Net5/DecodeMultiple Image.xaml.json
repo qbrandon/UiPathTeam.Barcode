@@ -1,0 +1,46 @@
+{
+  "DisplayName": "DecodeMultiple Image",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "IconRelativePath": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "Output",
+      "DisplayName": "Output",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "Image",
+      "DisplayName": "Image",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "Format",
+      "DisplayName": "Format",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "Charset",
+      "DisplayName": "Charset",
+      "Category": null,
+      "Tooltip": "Charset to be used for decode (e.g. \"SJIS\")",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    }
+  ]
+}

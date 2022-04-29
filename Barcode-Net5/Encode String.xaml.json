@@ -1,0 +1,82 @@
+{
+  "DisplayName": "Encode String",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "IconRelativePath": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "Input",
+      "DisplayName": "Input",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "Width",
+      "DisplayName": "Width",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "Height",
+      "DisplayName": "Height",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "Margin",
+      "DisplayName": "Margin",
+      "Category": null,
+      "Tooltip": "Defaults to 0",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "PureBarcode",
+      "DisplayName": "PureBarcode",
+      "Category": null,
+      "Tooltip": "Exclude human readble text at bottom\nDefaults to True",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "Format",
+      "DisplayName": "Format",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "Output",
+      "DisplayName": "Output",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "Charset",
+      "DisplayName": "Charset",
+      "Category": null,
+      "Tooltip": "For QR Code only (e.g. \"SJIS\")",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    }
+  ]
+}
